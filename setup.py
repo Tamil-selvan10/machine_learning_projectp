@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 from typing import List
 
 
@@ -15,14 +15,14 @@ def get_requirements_list()->List[str]:
     Description: This function is going to return the name of libraries in the requirements.txt file
     '''
     with open (file=REQUIREMENT_FILE_NAME,mode='r') as f:
-        return f.readlines()
+        return f.readlines().remove('-e .')
 
 setup(
     name=PROJECT_NAME,
     version=VERSION,
     author=AUTHOR,
     description=DESCRIPTION,
-    packages=PACKAGES,
+    packages=find_packages(), #['Housing'] folders name which has __init__.py
     install_requires=get_requirements_list()
 )
 
