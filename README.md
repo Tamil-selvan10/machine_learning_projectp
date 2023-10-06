@@ -6,6 +6,7 @@
 2. [Heroku Account](https://signup.heroku.com/)
 3. [VS Code IDE](https://code.visualstudio.com/download)
 4. [GIT CLI](https://git-scm.com/downloads)
+5. [Git Documentation](https://git-scm.com/docs/gittutorial)
 
 
 Creating conda environment:
@@ -65,4 +66,11 @@ git commit -m "message"
 To send version/changes to github:
 ```
 git push origin main
+```
+
+To check remote url:
+```
+git remote -v  (remote list)
+git remote add origin
+git remote rm origin
 ```
