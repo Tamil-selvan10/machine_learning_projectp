@@ -74,3 +74,37 @@ git remote -v  (remote list)
 git remote add origin
 git remote rm origin
 ```
+
+
+To setup CI/CD pipeline in Heroku we need 3 information
+
+1.HEROKU_EMAIL=
+2.HEROKU_API_KEY=
+3.HEROKU_APP_NAME=
+
+
+To build Docker image:
+```
+docker build -t <image_name>:<tag_name> .
+```
+> Note: Image name for docker must be lower case.   
+
+To list docker images:
+```
+docker images
+```
+
+To run docker image:
+```
+docker run -p 5000:5000 -e PORT=5000 <image_ID>
+```
+
+To check running container in docker:
+```
+docker ps
+```
+
+To stop docker container:
+```
+docker stop <container_id>
+```
